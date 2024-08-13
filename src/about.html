@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> link}} <!-- Include your CSS and other head elements here -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="font-JosefinSans">
+    {{> mini-header}}
+    {{> header}}
+
+    <!-- Hero Section -->
+    <section class="relative bg-black bg-opacity-50 text-white">
+        <!-- Overlay Effect -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-70"></div>
+        <!-- Background Image -->
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="assets/image/living-rooms-interior-design-indoors-gray-wallpaper.jpg" alt="Hero Image"
+                class="object-cover w-full h-full opacity-40">
+        </div>
+        <!-- Content -->
+        <div class="relative z-10 flex flex-col items-center justify-center min-h-screen py-16 text-center px-4">
+            <h1
+                class="text-4xl font-extrabold mb-6 leading-tight text-shadow-lg 2xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl xl:text-xl s:text-lg">
+                About Us</h1>
+            <p
+                class="text-lg  max-w-4xl mx-auto mb-8 leading-relaxed text-shadow-md sm:text-lg xl:text-base s:text-base 2xl:text-lg lg:text-lg md:text-lg ">
+                We are a passionate team dedicated to delivering exceptional products and services to our customers.
+                Discover our commitment to excellence and innovation.
+            </p>
+            <a href="../src/Contact.html"
+                class="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-slate-500 to-slate-800 text-white font-semibold text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-12 text-gray-800">Meet Our Team</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Team Member -->
+                <div
+                    class="bg-gradient-to-br from-white to-gray-200 rounded-lg shadow-xl p-6 max-w-xs transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                    <img src="assets/image/i-61.webp" alt="Team Member"
+                        class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 border-4 border-gray-200 hover:border-gray-400 transition-colors duration-300">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-2 text-gray-800">John Doe</h3>
+                    <p class="text-gray-600">CEO & Founder</p>
+                </div>
+                <!-- Team Member -->
+                <div
+                    class="bg-gradient-to-br from-white to-gray-200 rounded-lg shadow-xl p-6 max-w-xs transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                    <img src="assets/image/i-64.webp" alt="Team Member"
+                        class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 border-4 border-gray-200 hover:border-gray-400 transition-colors duration-300">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-2 text-gray-800">Jane Smith</h3>
+                    <p class="text-gray-600">Chief Operating Officer</p>
+                </div>
+                <!-- Team Member -->
+                <div
+                    class="bg-gradient-to-br from-white to-gray-200 rounded-lg shadow-xl p-6 max-w-xs transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                    <img src="assets/image/i-63.webp" alt="Team Member"
+                        class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 border-4 border-gray-200 hover:border-gray-400 transition-colors duration-300">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-2 text-gray-800">Alice Johnson</h3>
+                    <p class="text-gray-600">Lead Designer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Values Section -->
+    <section class="py-16 bg-gray-200">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-8">Our Values</h2>
+            <p class="text-base sm:text-lg max-w-2xl mx-auto mb-8">
+                We are committed to innovation, excellence, and customer satisfaction.
+                Our core values guide us in everything we do and drive us to make a positive impact.
+            </p>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Value Card -->
+                <div class="bg-white rounded-lg shadow-lg p-6 max-w-xs">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-4">Innovation</h3>
+                    <p class="text-gray-600">We strive to push the boundaries of what’s possible and deliver
+                        cutting-edge solutions.</p>
+                </div>
+                <!-- Value Card -->
+                <div class="bg-white rounded-lg shadow-lg p-6 max-w-xs">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-4">Excellence</h3>
+                    <p class="text-gray-600">We are committed to delivering top-quality products and services that
+                        exceed expectations.</p>
+                </div>
+                <!-- Value Card -->
+                <div class="bg-white rounded-lg shadow-lg p-6 max-w-xs">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-4">Customer Satisfaction</h3>
+                    <p class="text-gray-600">Our customers are at the heart of everything we do, and we work tirelessly
+                        to ensure their satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{> footer}}
+
+</body>
+
+</html>

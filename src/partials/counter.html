@@ -1,0 +1,56 @@
+<section class="py-12 mt-20 bg-gradient-to-r from-teal-100 to-blue-100">
+    <div class="container mx-auto font-JosefinSans">
+        <div class="text-center mb-12">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+                Dynamic Animated Counters
+            </h1>
+        </div>
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+            <div
+                class="counter bg-white p-6 md:p-8 rounded-lg shadow-xl flex items-center justify-center border-t-4 border-teal-400">
+                <span id="count1" class="text-5xl font-bold text-gray-900">0</span>
+            </div>
+            <div
+                class="counter bg-white p-6 md:p-8 rounded-lg shadow-xl flex items-center justify-center border-t-4 border-teal-400">
+                <span id="count2" class="text-5xl font-bold text-gray-900">0</span>
+            </div>
+            <div
+                class="counter bg-white p-6 md:p-8 rounded-lg shadow-xl flex items-center justify-center border-t-4 border-teal-400">
+                <span id="count3" class="text-5xl font-bold text-gray-900">0</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        function formatNumber(num) {
+            if (num >= 1e6) {
+                return (num / 1e6).toFixed(1) + 'M';
+            } else if (num >= 1e3) {
+                return (num / 1e3).toFixed(1) + 'k';
+            } else {
+                return num;
+            }
+        }
+
+        function counter(id, start, end, duration) {
+            let obj = document.getElementById(id),
+                current = start,
+                range = end - start,
+                increment = end > start ? 1 : -1,
+                step = Math.abs(Math.floor(duration / range)),
+                timer = setInterval(() => {
+                    current += increment;
+                    obj.textContent = formatNumber(current);
+                    if (current === end) {
+                        clearInterval(timer);
+                    }
+                }, step);
+        }
+
+        counter("count1", 1000, 2300, 3000);
+        counter("count2", 1000, 1900, 3000);
+        counter("count3", 1000, 2500, 2000);
+    });
+</script>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign In</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-gradient-to-r from-blue-100 to-blue-300 flex items-center justify-center min-h-screen">
+
+    <div
+        class="bg-white shadow-xl rounded-xl p-6 md:p-8 lg:p-10 max-w-lg w-full border border-gray-200 flex flex-col md:flex-row md:space-x-8 items-center">
+        <div class="md:w-1/2">
+            <h2 class="text-2xl font-extrabold mb-6 text-center text-gray-800">Sign In</h2>
+            <form>
+                <div class="mb-3 relative">
+                    <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                    <div class="mt-1 flex rounded-lg border border-gray-300 shadow-lg">
+                        <span
+                            class="inline-flex items-center px-3 rounded-l-lg border-r border-gray-300 bg-blue-50 text-blue-500 text-sm">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <input type="text" id="username" name="username" required
+                            class="block w-full px-3 py-2 border border-gray-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                    </div>
+                </div>
+                <div class="mb-3 relative">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <div class="mt-1 flex rounded-lg border border-gray-300 shadow-lg relative">
+                        <span
+                            class="inline-flex items-center px-3 rounded-l-lg border-r border-gray-300 bg-blue-50 text-blue-500 text-sm">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        <input type="password" id="password" name="password" required
+                            class="block w-full px-3 py-2 border border-gray-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        <span class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
+                            onclick="togglePassword('password', this)">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input type="checkbox" id="remember" name="remember"
+                        class="h-4 w-4 text-blue-600 border-gray-300 rounded">
+                    <label for="remember" class="ml-2 block text-sm text-gray-900">Remember me</label>
+                </div>
+                <button type="submit"
+                    class="w-full bg-blue-500 text-white py-2 rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">Sign
+                    In</button>
+                <p class="mt-4 text-center text-sm text-gray-600">Don't have an account? <a href="./signup.html"
+                        class="text-blue-500 hover:underline">Sign up</a></p>
+                <p class="mt-4 text-center text-sm text-gray-600"><a href="./forgotpass.html"
+                        class="text-blue-500 hover:underline">Forgot Password?</a></p>
+            </form>
+            <div class="flex items-center justify-center mt-4 space-x-4">
+                <button
+                    class="flex items-center justify-center w-12 h-12 bg-red-500 text-white rounded-full shadow-lg hover:bg-red-600 focus:outline-none"
+                    title="Sign in with Google">
+                    <i class="fab fa-google"></i>
+                </button>
+                <button
+                    class="flex items-center justify-center w-12 h-12 bg-black text-white rounded-full shadow-lg hover:bg-gray-800 focus:outline-none"
+                    title="Sign in with Apple">
+                    <i class="fab fa-apple"></i>
+                </button>
+                <button
+                    class="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 focus:outline-none"
+                    title="Sign in with Facebook">
+                    <i class="fab fa-facebook"></i>
+                </button>
+            </div>
+        </div>
+        <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center md:justify-end">
+            <img src="assets/image/sign-in-animate.svg" alt="Sign In Image" class="rounded-xl shadow-lg max-w-full">
+        </div>
+    </div>
+
+    <script>
+        function togglePassword(fieldId, iconElement) {
+            const field = document.getElementById(fieldId);
+            if (field.type === "password") {
+                field.type = "text";
+                iconElement.querySelector('i').classList.remove('fa-eye');
+                iconElement.querySelector('i').classList.add('fa-eye-slash');
+            } else {
+                field.type = "password";
+                iconElement.querySelector('i').classList.remove('fa-eye-slash');
+                iconElement.querySelector('i').classList.add('fa-eye');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

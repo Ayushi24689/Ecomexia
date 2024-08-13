@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    {{> link}}
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .product-card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <header class="bg-white shadow-md py-4">
+        <nav class="container mx-auto flex items-center justify-between">
+            <h1 class="text-2xl font-bold">My Store</h1>
+            <a href="/" class="text-blue-500 hover:underline">Home</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto my-8 p-4 bg-white rounded-lg shadow-md">
+        <h2 class="text-3xl font-semibold mb-4">Shopping Cart</h2>
+
+        <div id="cart-items" class="space-y-4">
+            <!-- Cart items will be dynamically injected here -->
+        </div>
+
+        <div class="flex justify-between items-center mt-6">
+            <p class="text-lg font-semibold" id="total-price">Total: $0.00</p>
+            <a href="./buynow.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Proceed to
+                Checkout</a>
+        </div>
+    </main>
+
+    <script>
+        // Example cart items (should be fetched from storage or server)
+        const cartItems = [
+            { id: 1, name: 'Product 1', price: 29.99, quantity: 1 },
+            { id: 2, name: 'Product 2', price: 49.99, quantity: 2 }
+        ];
+
+        // Function to render cart items
+        function renderCartItems() {
+            const cartContainer = document.getElementById('cart-items');
+            cartContainer.innerHTML = '';
+
+            let totalPrice = 0;
+
+            cartItems.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                totalPrice += itemTotal;
+
+                const itemCard = document.createElement('div');
+                itemCard.className = 'product-card p-4 rounded-md bg-gray-50 flex justify-between items-center';
+
+                itemCard.innerHTML = `
+                    <div class="flex-1">
+                        <h3 class="text-lg font-semibold">${item.name}</h3>
+                        <p class="text-gray-600">$${item.price.toFixed(2)}</p>
+                        <p class="text-gray-500">Quantity: ${item.quantity}</p>
+                    </div>
+                    <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" onclick="removeItem(${item.id})">Remove</button>
+                `;
+
+                cartContainer.appendChild(itemCard);
+            });
+
+            document.getElementById('total-price').textContent = `Total: $${totalPrice.toFixed(2)}`;
+        }
+
+        // Function to remove item
+        function removeItem(itemId) {
+            const itemIndex = cartItems.findIndex(item => item.id === itemId);
+            if (itemIndex !== -1) {
+                cartItems.splice(itemIndex, 1);
+                renderCartItems();
+            }
+        }
+
+        // Initial render
+        renderCartItems();
+    </script>
+
+</body>
+
+</html>

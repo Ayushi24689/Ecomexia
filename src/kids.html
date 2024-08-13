@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Kids' Wear</title>
+    {{> link}}
+</head>
+
+<body class="bg-gray-50">
+    {{> mini-header}}
+    {{> header}}
+
+    <!-- Component 1: Hero Banner with Overlay -->
+    <section class="relative bg-gray-200 py-20">
+        <img src="assets/image/i-236.webp" alt="Hero Banner"
+            class="w-full h-96 object-cover absolute inset-0 z-0 opacity-70 filter blur-sm">
+        <div class="relative container mx-auto text-center z-10 px-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">Discover Kids' Fashion Like
+                Never
+                Before</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600">Trendy outfits for every adventure and celebration</p>
+            <a href="#"
+                class="mt-8 inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-full text-lg font-semibold transition-transform transform hover:scale-110 hover:shadow-lg">Shop
+                Now</a>
+        </div>
+    </section>
+
+    <!-- Component 2: Product Highlights -->
+    <section class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-8">Top Picks for Kids</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="assets/image/i-237.webp" alt="Product 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Product 1</h3>
+                        <p class="mt-2 text-gray-600">$29.99</p>
+                        <a href="./kid/kids1.html"
+                            class="mt-4 inline-block bg-black text-white py-2 px-4 rounded-lg text-sm font-semibold">Shop
+                            Now</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="assets/image/i-238.webp" alt="Product 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Product 2</h3>
+                        <p class="mt-2 text-gray-600">$34.99</p>
+                        <a href="./kid/kids2.html"
+                            class="mt-4 inline-block bg-black text-white py-2 px-4 rounded-lg text-sm font-semibold">Shop
+                            Now</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="assets/image/i-239.webp" alt="Product 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Product 3</h3>
+                        <p class="mt-2 text-gray-600">$39.99</p>
+                        <a href="./kid/kids3.html"
+                            class="mt-4 inline-block bg-black text-white py-2 px-4 rounded-lg text-sm font-semibold">Shop
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component 3: Style Inspirations -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8">Style Inspirations</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="assets/image/i-240.webp" alt="Style 1" class="w-full h-60 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Style 1</h3>
+                        <p class="mt-2 text-gray-600">Cool and casual</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="assets/image/i-241.webp" alt="Style 2" class="w-full h-60 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Style 2</h3>
+                        <p class="mt-2 text-gray-600">Trendy and chic</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="assets/image/i-242.webp" alt="Style 3" class="w-full h-60 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Style 3</h3>
+                        <p class="mt-2 text-gray-600">Elegant and refined</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="assets/image/i-243.webp" alt="Style 4" class="w-full h-60 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Style 4</h3>
+                        <p class="mt-2 text-gray-600">Fun and playful</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component 4: Customer Testimonials -->
+    <section class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-8">Happy Customers</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 w-80">
+                    <p class="text-gray-600">"Absolutely love the clothes! They are so stylish and comfortable for my
+                        kids."
+                    </p>
+                    <p class="mt-4 font-semibold">- Emily Clark</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 w-80">
+                    <p class="text-gray-600">"Great quality and fast delivery. Will definitely be shopping here again!"
+                    </p>
+                    <p class="mt-4 font-semibold">- Michael Johnson</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component 5: Featured Products -->
+    <section class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Featured Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="assets/image/i-244.webp" alt="Product 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Product 1</h3>
+                        <p class="mt-2 text-gray-600">$29.99</p>
+                        <a href="./kid/kids4.html"
+                            class="mt-4 inline-block bg-black text-gray-100 py-2 px-4 rounded-lg text-sm font-semibold">View
+                            Details</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="assets/image/i-245.webp" alt="Product 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Product 2</h3>
+                        <p class="mt-2 text-gray-600">$34.99</p>
+                        <a href="./kid/kids5.html"
+                            class="mt-4 inline-block bg-black text-gray-100 py-2 px-4 rounded-lg text-sm font-semibold">View
+                            Details</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="assets/image/i-246.webp" alt="Product 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Product 3</h3>
+                        <p class="mt-2 text-gray-600">$39.99</p>
+                        <a href="./kid/kids6.html"
+                            class="mt-4 inline-block bg-black text-gray-100 py-2 px-4 rounded-lg text-sm font-semibold">View
+                            Details</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="assets/image/i-247.webp" alt="Product 4" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Product 4</h3>
+                        <p class="mt-2 text-gray-600">$49.99</p>
+                        <a href="./kid/kids7.html"
+                            class="mt-4 inline-block bg-black text-gray-100 py-2 px-4 rounded-lg text-sm font-semibold">View
+                            Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component 6: Newsletter Signup -->
+    <section class="bg-gray-800 py-16 text-center text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Stay Updated!</h2>
+            <p class="text-lg mb-8">Subscribe to our newsletter for the latest trends and exclusive offers.</p>
+            <form action="#" method="POST" class="flex justify-center">
+                <input type="email" placeholder="Enter your email" required
+                    class="p-3 rounded-l-lg text-black border-none focus:outline-none">
+                <button type="submit"
+                    class="bg-blue-500 p-3 rounded-r-lg text-white font-semibold hover:bg-blue-600 transition">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Component 7: Contact Us -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+            <div class="flex flex-col md:flex-row md:justify-between">
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-6 md:mb-0 md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+                    <p class="text-gray-600 mb-4">Have questions or feedback? We'd love to hear from you!</p>
+                    <form action="#" method="POST">
+                        <input type="text" placeholder="Your Name" required
+                            class="block w-full p-3 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:border-gray-500">
+                        <input type="email" placeholder="Your Email" required
+                            class="block w-full p-3 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:border-gray-500">
+                        <textarea placeholder="Your Message" rows="4" required
+                            class="block w-full p-3 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:border-gray-500"></textarea>
+                        <button type="submit"
+                            class="bg-blue-500 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-600 transition">Send
+                            Message</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4">Our Location</h3>
+                    <p class="text-gray-600 mb-4">123 Fashion Street, Trendy City, 45678</p>
+                    <p class="text-gray-600 mb-4">Phone: (123) 456-7890</p>
+                    <p class="text-gray-600 mb-4">Email: info@fashionkids.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{> footer}}
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+{{> mini-header}}
+{{>header}}
+
+<head>
+    <title>Contact us</title>
+    {{> link}}
+</head>
+
+<body>
+    <!-- <div>
+        <div>
+            <img src="assets/image/thumb-1920-270991.jpg" alt="">
+        </div>
+    </div> -->
+    <!-- Contact Us Section -->
+    <!-- Contact Us Section -->
+    <section id="contact" class="relative font-JosefinSans bg-gray-100 py-16 bg-cover bg-center"
+        style="background-image: url('assets/image/thumb-1920-270991.jpg');">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-opacity-90 rounded-lg shadow-lg">
+            <div class="text-center mb-12">
+                <h2 class="text-base text-yellow-400 font-semibold tracking-wide uppercase">Contact Us</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                    We'd love to hear from you
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-200 lg:mx-auto">
+                    Whether you have a question about features, pricing, need a demo, or anything else, our team is
+                    ready to
+                    answer all your questions.
+                </p>
+            </div>
+
+            <div class="mt-12 flex flex-col sm:flex-row justify-center">
+                <div class="sm:w-1/2 lg:w-1/3">
+                    <form action="#" method="POST"
+                        class="bg-white bg-opacity-90 shadow-lg rounded-lg p-8 transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" name="name" id="name"
+                                class="mt-1 p-2 block w-full outline-none shadow-sm sm:text-sm border-gray-300 rounded-md focus:ring-yellow-400 focus:border-yellow-400 transition duration-300 ease-in-out transform hover:shadow-md">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" name="email" id="email"
+                                class="mt-1 p-2 block w-full shadow-sm outline-none sm:text-sm border-gray-300 rounded-md focus:ring-yellow-400 focus:border-yellow-400 transition duration-300 ease-in-out transform hover:shadow-md">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea name="message" id="message" rows="4"
+                                class="mt-1 p-2 block w-full shadow-sm outline-none sm:text-sm border-gray-300 rounded-md focus:ring-yellow-400 focus:border-yellow-400 transition duration-300 ease-in-out transform hover:shadow-md"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit"
+                                class="w-full bg-yellow-700 text-white p-2 rounded-md hover:bg-yellow-800 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 transform transition-transform duration-300 hover:scale-105">Send
+                                Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="mt-20 flex justify-around">
+        <div class="">
+            <p class="font-JosefinSans text-xl">
+                mail@domain.com <br>
+                +(123) 4567 890
+            </p>
+        </div>
+        <div class="">
+            <p class="font-JosefinSans text-xl">
+                mail@ecommerce.com <br>
+                +(123) 4567 890
+            </p>
+        </div>
+        <div class="">
+            <p class="font-JosefinSans text-xl">
+                mail@website.com <br>
+                +(123) 4567 890
+            </p>
+        </div>
+        <div class="">
+            <p class="font-JosefinSans text-xl">
+                mail@purchase.com <br>
+                +(123) 4567 890
+            </p>
+        </div>
+    </div>
+
+
+    <section class="py-12 px-6 font-JosefinSans">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Our Location</h2>
+            <div class="relative w-full h-80 bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+                <iframe class="absolute inset-0 w-full h-full"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.318130044559!2d-122.41941508468103!3d37.7749292797592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f6b8c6a07%3A0x20d636ebf926b92!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1625564432805!5m2!1sen!2sus"
+                    frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        document.getElementById('electronics-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            const submenu = document.getElementById('electronics-submenu');
+            submenu.classList.toggle('hidden');
+        });
+
+        // Optional: Hide the submenu when clicking outside
+        document.addEventListener('click', function (event) {
+            const submenu = document.getElementById('electronics-submenu');
+            const target = event.target;
+            if (!submenu.contains(target) && target.id !== 'electronics-link') {
+                submenu.classList.add('hidden');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const pagesToggle = document.getElementById('pages-toggle');
+            const shopToggle = document.getElementById('shop-toggle');
+            const pagesMenu = document.getElementById('pages-menu');
+            const shopMenu = document.getElementById('shop-menu');
+
+            pagesToggle.addEventListener('click', function (event) {
+                event.preventDefault();
+                pagesMenu.classList.toggle('hidden');
+                shopMenu.classList.add('hidden'); // Close shop menu if open
+            });
+
+            shopToggle.addEventListener('click', function (event) {
+                event.preventDefault();
+                shopMenu.classList.toggle('hidden');
+                pagesMenu.classList.add('hidden'); // Close pages menu if open
+            });
+
+            // Optional: Click outside to close menus
+            document.addEventListener('click', function (event) {
+                const isClickInsidePages = pagesMenu.contains(event.target) || pagesToggle.contains(event.target);
+                const isClickInsideShop = shopMenu.contains(event.target) || shopToggle.contains(event.target);
+
+                if (!isClickInsidePages) {
+                    pagesMenu.classList.add('hidden');
+                }
+
+                if (!isClickInsideShop) {
+                    shopMenu.classList.add('hidden');
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = document.getElementById('slider');
+            const slides = slider.children;
+            const totalSlides = slides.length;
+            let currentSlide = 0;
+
+            function updateSlider() {
+                const offset = -currentSlide * 100;
+                slider.style.transform = `translateX(${offset}%)`;
+            }
+
+            document.getElementById('prev').addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            });
+
+            document.getElementById('next').addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            });
+
+            // Initialize the slider position
+            updateSlider();
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+            function counter(id, start, end, duration) {
+                let obj = document.getElementById(id),
+                    current = start,
+                    range = end - start,
+                    increment = end > start ? 1 : -1,
+                    step = Math.abs(Math.floor(duration / range)),
+                    timer = setInterval(() => {
+                        current += increment;
+                        obj.textContent = current;
+                        if (current == end) {
+                            clearInterval(timer);
+                        }
+                    }, step);
+            }
+            counter("count1", 0, 10, 3000);
+            counter("count2", 0, 50, 2500);
+            counter("count3", 0, 100, 3000);
+        });
+    </script>
+</body>
+
+{{>footer}}

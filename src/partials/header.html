@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Main Header Section -->
+    <header class="bg-black z-30 w-full relative">
+        <div class="container mx-auto flex flex-wrap justify-between px-4 sm:px-10 md:px-8 lg:px-10">
+            <!-- Logo and Tagline -->
+            <a href="../index.html" class="text-white font-JosefinSans flex mb-3 mt-3">
+                <div class="text-sm text-left">
+                    <strong
+                        class="uppercase text-2xl 2xl:text-2xl md:text-2xl sm:text-base xl:text-base s:text-base">Ecomexia</strong><br />
+                    <span
+                        class="text-base text-gray-300 2xl:text-base md:text-base sm:text-sm xl:text-sm s:text-sm">Ecom
+                        Deals</span>
+                </div>
+            </a>
+
+            <!-- Hamburger Menu for Mobile -->
+            <div class="block md:hidden">
+                <button id="hamburger" class="text-white focus:outline-none">
+                    <i class="fa-solid fa-bars fa-lg"></i>
+                </button>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden md:flex flex-grow items-center justify-center space-x-4 lg:space-x-6 xl:space-x-4">
+                <ul
+                    class="flex text-white font-JosefinSans space-x-4 lg:space-x-6 xl:space-x-4 sm:space-x-3 s:space-x-2 text-xs">
+                    <li>
+                        <a href="#" class="hover:text-gray-300 hidden 2xl:block lg:block md:block sm:hidden s:hidden"
+                            id="all-departments-link">
+                            <i class="fa-solid fa-bars"></i> All Departments
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html" class="hover:text-gray-300">Home</a>
+                    </li>
+                    <li class="relative group">
+                        <a href="#" class="hover:text-gray-300 pages-toggle">Pages</a>
+                        <ul
+                            class="absolute hidden text-black text-center -ml-16 mt-2 p-4 space-y-2 bg-white group-hover:block pages-menu">
+                            <li><a href="../about.html" class="block px-14 py-2 hover:bg-gray-200">About Us</a></li>
+                            <li><a href="../Faqs.html" class="block px-14 py-2 hover:bg-gray-200">FAQ</a></li>
+                            <li><a href="../404.html" class="block px-14 py-2 hover:bg-gray-200">404</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#" class="hover:text-gray-300 shop-toggle">Shop</a>
+                        <div
+                            class="flex hidden absolute bg-white text-black -ml-36 mt-2 p-4 space-x-3 shop-menu group-hover:flex">
+                            <ul class="flex flex-col space-y-2">
+                                <li><strong class="font-bold">Fashion</strong></li>
+                                <li><a href="../men.html" class="block px-4 py-2 hover:bg-gray-200">Men</a></li>
+                                <li><a href="../women.html" class="block px-4 py-2 hover:bg-gray-200">Women</a></li>
+                                <li><a href="../kids.html" class="block px-4 py-2 hover:bg-gray-200">Kids</a></li>
+                            </ul>
+                            <ul class="flex flex-col space-y-2 mt-4">
+                                <li><strong class="font-bold">Furniture</strong></li>
+                                <li><a href="../living.html" class="block px-4 py-2 hover:bg-gray-200">Living Room</a>
+                                </li>
+                                <li><a href="../kitchen.html" class="block px-4 py-2 hover:bg-gray-200">Kitchen</a></li>
+                                <li><a href="../office.html" class="block px-4 py-2 hover:bg-gray-200">Office</a></li>
+                            </ul>
+                            <ul class="flex flex-col space-y-2 mt-4">
+                                <li><strong class="font-bold">Sports Shoes</strong></li>
+                                <li><a href="../walkingshoes.html" class="block px-4 py-2 hover:bg-gray-200">Walking</a>
+                                </li>
+                                <li><a href="../runningshoes.html" class="block px-4 py-2 hover:bg-gray-200">Running</a>
+                                </li>
+                                <li><a href="../sneakers.html" class="block px-4 py-2 hover:bg-gray-200">Sneakers</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <a href="#" class="hover:text-gray-300 electronics-link">Electronics</a>
+                        <div
+                            class="flex hidden absolute bg-white -ml-20 text-black mt-2 p-4 space-y-4 electronics-submenu group-hover:flex">
+                            <ul class="flex flex-col space-y-2">
+                                <li><strong class="font-bold">Mobiles</strong></li>
+                                <li><a href="../apple.html" class="block px-4 py-2 hover:bg-gray-200">Apple</a></li>
+                                <li><a href="../samsung.html" class="block px-4 py-2 hover:bg-gray-200">Samsung
+                                        Galaxy</a></li>
+                                <li><a href="../Xiaomi.html" class="block px-4 py-2 hover:bg-gray-200">Xiaomi</a></li>
+                                <li><a href="../blackberry.html"
+                                        class="block px-4 py-2 hover:bg-gray-200">BlackBerry</a></li>
+                                <li><a href="../lenovo.html" class="block px-4 py-2 hover:bg-gray-200">Lenovo</a></li>
+                            </ul>
+                            <ul class="flex flex-col space-y-2 mt-4">
+                                <li><strong class="font-bold">Camera</strong></li>
+                                <li><a href="../lanses.html" class="block px-4 py-2 hover:bg-gray-200">Lenses</a></li>
+                                <li><a href="../dslr.html" class="block px-4 py-2 hover:bg-gray-200">DSLR</a></li>
+                                <li><a href="../tripods.html" class="block px-4 py-2 hover:bg-gray-200">Tripods</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../Contact.html" class="hover:text-gray-300">Contact Us</a>
+                    </li>
+                </ul>
+                <!-- Sign In and Sign Up Links -->
+                <div class="flex items-end space-x-4 text-white text-xs">
+                    <a href="../signin.html" class="hover:text-gray-300">
+                        <i class="fa-solid fa-sign-in-alt text-xs"></i> Sign In
+                    </a>
+                    <a href="../signup.html" class="hover:text-gray-300">
+                        <i class="fa-solid fa-user-plus text-xs"></i> Sign Up
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black w-full">
+            <ul class="text-white font-JosefinSans text-center text-xs space-y-2 p-4">
+                <li><a href="#" class="hover:text-gray-300 block all-departments-link">All Departments</a></li>
+                <li><a href="../index.html" class="hover:text-gray-300 block">Home</a></li>
+                <li class="relative group">
+                    <a href="#" class="hover:text-gray-300 block pages-toggle">Pages</a>
+                    <ul class="hidden text-black text-center mt-2 space-y-2 bg-white pages-menu">
+                        <li><a href="../about.html" class="block px-14 py-2 hover:bg-gray-200">About Us</a></li>
+                        <li><a href="../Faqs.html" class="block px-14 py-2 hover:bg-gray-200">FAQ</a></li>
+                        <li><a href="../404.html" class="block px-14 py-2 hover:bg-gray-200">404</a></li>
+                    </ul>
+                </li>
+                <li class="relative group">
+                    <a href="#" class="hover:text-gray-300 block shop-toggle">Shop</a>
+                    <ul class="hidden  text-black text-center mt-2 space-y-2 bg-white shop-menu">
+                        <li><strong class="font-bold">Fashion</strong></li>
+                        <li><a href="../men.html" class="block px-14 py-2 hover:bg-gray-200">Men</a></li>
+                        <li><a href="../women.html" class="block px-14 py-2 hover:bg-gray-200">Women</a></li>
+                        <li><a href="../kids.html" class="block px-14 py-2 hover:bg-gray-200">Kids</a></li>
+                        <li><strong class="font-bold">Furniture</strong></li>
+                        <li><a href="../living.html" class="block px-14 py-2 hover:bg-gray-200">Living Room</a></li>
+                        <li><a href="../kitchen.html" class="block px-14 py-2 hover:bg-gray-200">Kitchen</a></li>
+                        <li><a href="../office.html" class="block px-14 py-2 hover:bg-gray-200">Office</a></li>
+                        <li><strong class="font-bold">Sports Shoes</strong></li>
+                        <li><a href="../walkingshoes.html" class="block px-14 py-2 hover:bg-gray-200">Walking</a></li>
+                        <li><a href="../runningshoes.html" class="block px-14 py-2 hover:bg-gray-200">Running</a></li>
+                        <li><a href="../sneakers.html" class="block px-14 py-2 hover:bg-gray-200">Sneakers</a></li>
+                    </ul>
+                </li>
+                <li class="relative group">
+                    <a href="#" class="hover:text-gray-300 block electronics-link">Electronics</a>
+                    <ul class="hidden text-black text-center mt-2 space-y-2 bg-white electronics-submenu">
+                        <li><strong class="font-bold">Mobiles</strong></li>
+                        <li><a href="../apple.html" class="block px-14 py-2 hover:bg-gray-200">Apple</a></li>
+                        <li><a href="../samsung.html" class="block px-14 py-2 hover:bg-gray-200">Samsung Galaxy</a></li>
+                        <li><a href="../Xiaomi.html" class="block px-14 py-2 hover:bg-gray-200">Xiaomi</a></li>
+                        <li><a href="../blackberry.html" class="block px-14 py-2 hover:bg-gray-200">BlackBerry</a></li>
+                        <li><a href="../lenovo.html" class="block px-14 py-2 hover:bg-gray-200">Lenovo</a></li>
+                        <li><strong class="font-bold">Camera</strong></li>
+                        <li><a href="../lanses.html" class="block px-14 py-2 hover:bg-gray-200">Lenses</a></li>
+                        <li><a href="../dslr.html" class="block px-14 py-2 hover:bg-gray-200">DSLR</a></li>
+                        <li><a href="../tripods.html" class="block px-14 py-2 hover:bg-gray-200">Tripods</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Contact.html" class="hover:text-gray-300 block">Contact Us</a></li>
+            </ul>
+            <div class="text-white text-center">
+                <a href="../signin.html" class="hover:text-gray-300 block mb-2">
+                    <i class="fa-solid fa-sign-in-alt text-xs"></i> Sign In
+                </a>
+                <a href="../signup.html" class="hover:text-gray-300 block">
+                    <i class="fa-solid fa-user-plus text-xs"></i> Sign Up
+                </a>
+            </div>
+        </div>
+    </header>
+</body>
+<script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Toggle submenus
+    const pagesToggle = document.querySelectorAll('.pages-toggle');
+    const shopToggle = document.querySelectorAll('.shop-toggle');
+    const electronicsLink = document.querySelectorAll('.electronics-link');
+
+    pagesToggle.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggle.nextElementSibling.classList.toggle('hidden');
+        });
+    });
+
+    shopToggle.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggle.nextElementSibling.classList.toggle('hidden');
+        });
+    });
+
+    electronicsLink.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggle.nextElementSibling.classList.toggle('hidden');
+        });
+    });
+
+    // All Departments link toggle
+    const allDepartmentsLink = document.querySelectorAll('.all-departments-link');
+    allDepartmentsLink.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Add your logic for All Departments link toggle
+        });
+    });
+</script>
+
+</html>
